@@ -43,7 +43,7 @@ const ToDo = () => {
       <div className="ToDo-Container">
         <div className="ToDo-Content">
           {list.map((item) => {
-            return <ToDoItem key={item.id} item={item.text} deleteItem={() => deleteItem(item)} />;
+            return <ToDoItem key={item.id} item={item} deleteItem={deleteItem} />;
           })}
         </div>
 
