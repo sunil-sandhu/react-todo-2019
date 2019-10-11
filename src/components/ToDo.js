@@ -15,7 +15,7 @@ const ToDo = () => {
       alert("Please enter a todo!");
       return;
     }
-    const newId = Math.max.apply(null, list.map((t) => t.id)) + 1;
+    const newId = list && list.length > 0 ? Math.max.apply(null, list.map((t) => t.id)) + 1 : 1;
     const newToDo = { id: newId, text: toDo };
     setList([...list, newToDo]);
     setToDo("");
