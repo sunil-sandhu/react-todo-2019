@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import ToDoItem from "./ToDoItem";
+import "./ToDo.css";
 
 const ToDo = () => {
   const [list, setList] = useState([
@@ -9,13 +10,21 @@ const ToDo = () => {
   ]);
   const [toDo, setToDo] = useState("");
 
+  const generateId = () => {
+    if (list && list.length > 1) {
+      return Math.max(...list.map((t) => t.id)) + 1;
+    } else {
+      return 1;
+    }
+  };
+
   const createNewToDoItem = () => {
     //validate todo
     if (!toDo) {
       alert("Please enter a todo!");
       return;
     }
-    const newId = Math.max.apply(null, list.map((t) => t.id)) + 1;
+    const newId = generateId();
     const newToDo = { id: newId, text: toDo };
     setList([...list, newToDo]);
     setToDo("");
