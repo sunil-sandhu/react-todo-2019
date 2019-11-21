@@ -40,15 +40,14 @@ const ToDo = () => {
     setToDo(e.target.value);
   };
 
-  const deleteItem = (todo) => {
-    setList(list.filter((item) => item !== todo));
+  const deleteItem = (id) => {
+    setList(list.filter((item) => item.id !== id));
   };
 
   return (
     <div className="ToDo">
       <img className="Logo" src={Logo} alt="React logo" />
       <h1 className="ToDo-Header">React To Do</h1>
-      <h3 className="ToDo-Subheader">now with Hooks!</h3>
       <div className="ToDo-Container">
         <div className="ToDo-Content">
           {list.map((item) => {
