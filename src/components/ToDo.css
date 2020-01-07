@@ -32,23 +32,20 @@
 }
 
 .ToDo-Add {
-  color: white;
-  font-size: 2em;
-  width: 40px;
-  height: 40px;
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 20px auto 0;
+  display: block;
+  padding: 4px 12px;
   cursor: pointer;
   background: #73ff73;
   border-radius: 10px;
   box-shadow: 1px 1px 1px #47a947;
-  margin: 20px auto 0;
+  color: white;
+  font-size: 28px;
 }
 
 .ToDo-Add:hover {
   box-shadow: none;
+  margin-top: 21px;
   margin-left: calc(auto + 1px);
 }
 
