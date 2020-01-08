@@ -7,8 +7,7 @@ const ToDoItem = (props) => {
   return (
     <div className="ToDoItem">
       <p className="ToDoItem-Text">{item.text}</p>
-      <button className="ToDoItem-Delete" 
-              onClick={() => deleteItem(item.id)}>
+      <button className="ToDoItem-Delete" onClick={() => deleteItem(item.id)}>
         -
       </button>
     </div>
