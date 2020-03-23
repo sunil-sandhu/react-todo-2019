@@ -11,7 +11,7 @@ const ToDo = () => {
   const [toDo, setToDo] = useState("");
 
   const generateId = () => {
-    if (list && list.length > 1) {
+    if (list && list.length > 0) {
       return Math.max(...list.map((t) => t.id)) + 1;
     } else {
       return 1;
